@@ -1,0 +1,26 @@
+<form>
+Number <input type="text" id="num" onFocus="changeColor()" onBlur="clearColor()"><br>
+Result <input type="text" id="result" readonly><br>
+<input type="button" value="Factorial" onClick="factorial()">
+</form>
+<script>
+  function changeColor(){
+   var num=document.getElementById("num");
+   num.setAttribute("style","background-color:yellow");
+  }
+ function clearColor(){
+   var num=document.getElementById("num");
+   num.setAttribute("style","background-color:white");
+  }
+
+  function factorial(){
+     var num=document.getElementById("num");
+     var result=document.getElementById("result");
+
+     var n=parseInt(num.value);
+     var f=1;
+     for(i=1;i<=n;i++)
+         f=f*i;
+     result.value=f; 
+  }
+</script>
